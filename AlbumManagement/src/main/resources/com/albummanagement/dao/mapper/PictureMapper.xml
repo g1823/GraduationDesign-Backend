@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.albummanagement.dao.mapper.PictureMapper">
+
+    <resultMap id="BaseResultMap" type="com.albummanagement.dao.entity.Picture">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="fileSize" column="file_size" jdbcType="BIGINT"/>
+            <result property="viewCount" column="view_count" jdbcType="INTEGER"/>
+            <result property="likeCount" column="like_count" jdbcType="INTEGER"/>
+            <result property="commentCount" column="comment_count" jdbcType="INTEGER"/>
+            <result property="downloadCount" column="download_count" jdbcType="INTEGER"/>
+            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="isPublic" column="is_public" jdbcType="TINYINT"/>
+            <result property="pictureName" column="picture_name" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,url,file_size,
+        view_count,like_count,comment_count,
+        download_count,category_id,user_id,
+        is_public,picture_name,description,
+        create_time
+    </sql>
+</mapper>
